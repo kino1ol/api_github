@@ -6,8 +6,7 @@ const App = observer(() =>
   <div className="App">
     <input onChange={UsersData.getUsers}/>
     <div>
-      {UsersData.users.items.length > 0 && UsersData.users.items.map(el => {
-        return (
+      {UsersData.users.items.length > 0 && UsersData.users.items.map(el =>
             <div key={el.node_id}>
               <h2>
                   {el.login}
@@ -28,8 +27,7 @@ const App = observer(() =>
                   Repos is {el.repos !== undefined ? el.repos.length : null}
               </h3>
             </div>
-        )
-      })}
+      )}
     </div>
   </div>
 )
